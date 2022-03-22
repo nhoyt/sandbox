@@ -9,8 +9,8 @@ export default class DebugLogging {
     // The constructor may be called with zero, one or two arguments. If two
     // arguments, they can be in any order: one is assumed to be the boolean
     // value for '_flag' and the other one the string value for '_label'.
-    for (const [i, arg] of args.entries()) {
-      if (i < 2) {
+    for (const [index, arg] of args.entries()) {
+      if (index < 2) {
         switch (typeof arg) {
           case 'boolean':
             this._flag = arg;
