@@ -2,10 +2,11 @@
 
 export default class DebugLogging {
   constructor (...args) {
+    // Set default values for cases where fewer than two arguments are provided.
     this._flag = true;
     this._label = 'debug';
 
-    // Constructor may be called with zero, one or two arguments. If two
+    // The constructor may be called with zero, one or two arguments. If two
     // arguments, they can be in any order: one is assumed to be the boolean
     // value for '_flag' and the other one the string value for '_label'.
     for (const arg of args) {
