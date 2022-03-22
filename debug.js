@@ -21,7 +21,7 @@
 *   Methods
 *     debug.log     calls console.log with label prefix and message
 *                   @param message {string}
-*                   @param [optional] spaceAbove {boolean}
+*                   @param spaceAbove [optional] {boolean}
 *     debug.tag     outputs tagName and textContent of DOM element
 *                   @param node {DOM node reference} - usually an HTMLElement
 *                   @param spaceAbove [optional] {boolean}
