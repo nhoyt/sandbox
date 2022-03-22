@@ -42,9 +42,10 @@ export default class DebugLogging {
     console.log(`${newline}[${this._label}] ${message}`);
   }
 
-  tag (elem, spaceAbove) {
-    if (elem && elem.tagName) {
-      this.log(`[${elem.tagName}]: ${elem.textContent.trim().substring(0, 20).trim()}`, spaceAbove);
+  tag (node, spaceAbove) {
+    if (node && node.tagName) {
+      const text = node.textContent.trim().replace(/\s+/g, ' ');
+      this.log(`[${node.tagName}]: ${text.substring(0, 20)}`, spaceAbove);
     }
   }
 
