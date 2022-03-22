@@ -11,8 +11,8 @@
 *     new DebugLogging() - calling the constructor with no arguments results
 *                   in debug.flag set to false and debug.label set to 'debug';
 *                   constructor accepts 0, 1 or 2 arguments in any order
-*                   @param flag {boolean} optional - sets debug.flag
-*                   @param label {string} optional - sets debug.label
+*                   @param flag [optional] {boolean} - sets debug.flag
+*                   @param label [optional] {string} - sets debug.label
 *   Properties
 *     debug.flag    {boolean} allows you to switch debug logging on or off;
 *                   default value is false
