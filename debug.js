@@ -19,11 +19,14 @@
 *     debug.label   {string} rendered as a prefix to each log message;
 *                   default value is 'debug'
 *   Methods
-*     debug.log     @param message {string}
-*                   @param spaceAbove {boolean} optional
-*     debug.tag     @param node {DOM node reference} - usually an HTMLElement
-*                   @param spaceAbove {boolean} optional
-*     debug.separator @param spaceAbove {boolean} optional
+*     debug.log     calls console.log with label prefix and message
+*                   @param message {string}
+*                   @param [optional] spaceAbove {boolean}
+*     debug.tag     outputs tagName and textContent of DOM element
+*                   @param node {DOM node reference} - usually an HTMLElement
+*                   @param spaceAbove [optional] {boolean}
+*     debug.separator - outputs only debug.label and a series of hyphens
+*                   @param spaceAbove [optional] {boolean}
 */
 
 export default class DebugLogging {
