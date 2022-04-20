@@ -1,4 +1,4 @@
-{
+export default const ariaInHTMLInfo = {
   title: 'ARIA in HTML',
   status: 'W3C Recommendation 09 December 2021',
   reference: 'https://www.w3.org/TR/html-aria/',
@@ -1486,4 +1486,4 @@
       id: 'wbr'
     }
   }
-}
+};
