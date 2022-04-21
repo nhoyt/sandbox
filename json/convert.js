@@ -1,20 +1,21 @@
-/* Code for converting JSON file to JavaScript module */
+/* Code for converting JSON file to JavaScript ES6 module */
 
-// get filesystem module
+// get built-in node.js modules
 const fs = require('fs');
 const os = require('os');
 const util = require('util');
 
-// use the readFileSync() function with path to the file
+// read JSON file into buffer object
 const buffer = fs.readFileSync("ariaInHtmlInfo.json");
 
-// use the toString() method to convert buffer to String
+// convert buffer object to String
 const jsonFromFile = buffer.toString();
 
-// parse the JSON string
+// convert JSON string to JavaScript object
 const objFromJson = JSON.parse(jsonFromFile);
 
-// use util.inspect to write the JavaScript object to a file
+// use util.inspect to convert the JavaScript object into a String and
+// then write it to a file that can be imported as a JavaScript module
 const prefix = 'export const ariaInHtmlInfo = ';
 const suffix = `;${os.EOL}`;
 fs.writeFile('output.mjs', prefix + util.inspect(objFromJson, { compact: false, depth: null }) + suffix, err => {
