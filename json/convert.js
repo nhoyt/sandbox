@@ -15,7 +15,7 @@ const jsonFromFile = buffer.toString();
 const objFromJson = JSON.parse(jsonFromFile);
 
 // use util.inspect to write the JavaScript object to a file
-const prefix = 'export default const ariaInHTMLInfo = ';
+const prefix = 'export const ariaInHtmlInfo = ';
 const suffix = `;${os.EOL}`;
 fs.writeFile('output.mjs', prefix + util.inspect(objFromJson, { compact: false, depth: null }) + suffix, err => {
   if (err) {
@@ -25,7 +25,7 @@ fs.writeFile('output.mjs', prefix + util.inspect(objFromJson, { compact: false, 
 });
 
 // for verification purposes, use JSON.stringify on the JavaScript object
-fs.writeFile('output.json', JSON.stringify(objFromJson, null, 4) + os.EOL, err => {
+fs.writeFile('outputFromParse.json', JSON.stringify(objFromJson, null, 4) + os.EOL, err => {
   if (err) {
     console.error(err);
     return;

@@ -14,34 +14,14 @@ console.log(obj.count);
 console.log(obj.result);
 // expected output: true
 
-/* Code for converting JSON file to JavaScript module */
+/* Code for converting an imported ES6 module to JSON */
 
-// get filesystem module
-const fs = require('fs');
-const os = require('os');
-const util = require('util');
+import { ariaInHtmlInfo } from './output.mjs';
+import { writeFile } from 'fs';
+import { EOL } from 'os';
 
-// use the readFileSync() function with path to the file
-const buffer = fs.readFileSync("ariaInHtmlInfo.json");
-
-// use the toString() method to convert buffer to String
-const jsonFromFile = buffer.toString();
-
-// parse the JSON string
-const objFromJson = JSON.parse(jsonFromFile);
-
-// use util.inspect to write the JavaScript object to a file
-const prefix = 'export default const ariaInHTMLInfo = ';
-const suffix = `;${os.EOL}`;
-fs.writeFile('output.js', prefix + util.inspect(objFromJson, { compact: false, depth: null }) + suffix, err => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-});
-
-// for verification purposes, use JSON.stringify on the JavaScript object
-fs.writeFile('output.json', JSON.stringify(objFromJson, null, 4) + os.EOL, err => {
+// Convert the imported JavaScript object to JSON with stringify method
+writeFile('outputFromImport.json', JSON.stringify(ariaInHtmlInfo, null, 4) + EOL, err => {
   if (err) {
     console.error(err);
     return;
