@@ -1,0 +1,39 @@
+:root {
+  box-sizing: border-box;
+  --button-diameter: 70px;
+  --button-color: black;
+  --hover-color: #444;
+}
+
+body {
+  padding: 1.5em 3em;
+}
+
+button {
+  background-color: var(--button-color);
+  color: white;
+
+  font-family: serif;
+  font-size: calc(var(--button-diameter) / 1.5);
+  font-style: italic;
+  font-weight: bold;
+
+  width: var(--button-diameter);
+  height: var(--button-diameter);
+
+  border: 2px solid var(--button-color);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px darkgray;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  box-shadow: 0 0 2px darkgray;
+  transform: translateY(2px);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+  border: 2px solid var(--hover-color);
+  cursor: pointer;
+}
