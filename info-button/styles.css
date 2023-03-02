@@ -17,6 +17,7 @@ button {
   font-size: calc(var(--button-diameter) / 1.5);
   font-style: italic;
   font-weight: bold;
+  padding: 4px 0 0; /* fix Gecko vertical spacing of text */
 
   width: var(--button-diameter);
   height: var(--button-diameter);
