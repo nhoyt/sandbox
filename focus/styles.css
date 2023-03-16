@@ -5,3 +5,8 @@ body {
 div {
   margin: 2rem 0;
 }
+
+span.required {
+  color: red;
+  font-weight: bold;
+}

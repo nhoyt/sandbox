@@ -12,12 +12,12 @@
     <main>
       <h2>Form</h2>
       <div>
-        <label for="t1">Text Input #1</label>
-        <input type="text" id="t1">
+        <label for="t1">Text Input #1 <span class="required">*</span></label>
+        <input aria-required="true" type="text" id="t1">
       </div>
       <div>
-        <label for="t2">Text Input #2</label>
-        <input type="text" id="t2">
+        <label for="t2">Text Input #2 <span class="required">*</span></label>
+        <input aria-required="true" type="text" id="t2">
       </div>
       <div>
         <label for="s1">Select option</label>
@@ -32,6 +32,9 @@
       <div>
         <label for="t3">Text Input #3</label>
         <input type="text" id="t3">
+      </div>
+      <div>
+        <p id="required"><span class="required">*</span> Required input</p>
       </div>
     </main>
   </body>
